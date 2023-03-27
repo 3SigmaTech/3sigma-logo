@@ -10,7 +10,7 @@ If you're 99.9% of the way toward perfection: you're waaaay ahead of most.
 For reference, 3-sigma is three standard deviations away from average in a distribution.
 Between +/- 3-sigma on a normal curve, there are 99.74% of all values or, put another way, 99.87% (99.9%) of all values are below +3-sigma.
 
-![Normal Distribution](https://upload.wikimedia.org/wikipedia/commons/2/25/The_Normal_Distribution.svg "The normal distribution. Source: Wikimedia")
+![Normal Distribution](/man/img/The_Normal_Distribution.svg "The normal distribution. Source: Wikimedia")
 
 To that end, I designed a logo with the lowercase sigma (σ) in mind - specifically referencing the sigma of "standard deviation" and not the sigma of "summation" (∑).
 I also wanted the logo to be a simple, geometric concept. With that in mind, let's take a visual journey.
@@ -20,7 +20,7 @@ I also wanted the logo to be a simple, geometric concept. With that in mind, let
 First, I wanted my logo to have three "σ" characters in it, and I wanted it to be rotationally symmetric.
 What do I mean by that? Below we see a 460x460 `svg` with three sigmas in it.
 (The reason for a 460px dimension will become clearer later - for now, trust me.)
-Throughout this discussion I'll leave a red frame and center circle for us to see a reference, with other reference objects coming into or out of use as we go.
+Throughout this discussion I'll leave a red frame and center circle for us to see a reference, with other reference objects coming into or out of use as we go - a red loading/progress spinner being the most ubiquitous.
 
 ![Rotational Symmetry](/man/img/rotational-symmetry.svg "Three elements rotated about a circle require 120 degrees of separation")
 
@@ -81,8 +81,7 @@ You'll need to know that the angles of an equilateral triangle are all 60°.
 
 ![Circles Triangle Top Point](/man/vid/triangle-top-point.svg "Daisy-chaining our way to the top")
 
-I also applied the following trigonomy functions to get the lengths of various lines (these were applied earlier to position the cirlces):
-$$
+I also applied the following trigonomy functions to get the lengths of various lines (these were applied earlier to position the cirlces): $$
 \text{SOHCAHTOA}
 \left\lbrace\begin{split}
     \sin(\theta) & = \frac{\text{Opposite}}{\text{Hypotenuse}}\\
@@ -90,8 +89,7 @@ $$
     \cos(\theta) & = \frac{\text{Adjacent}}{\text{Hypotenuse}}\\
     \\
     \tan(\theta) & = \frac{\text{Opposite}}{\text{Adjacent}}\\
-\end{split}\right.
-$$
+\end{split}\right. $$
 
 This shows the intersection point is $r·\sin(30°)$ above the center-point of the top circle, where $r$ is the radius of the circle. (Note: I arbitrarily used $r=100$ when defining my logo for simpler math).
 
