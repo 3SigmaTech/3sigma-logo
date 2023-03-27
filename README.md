@@ -38,7 +38,7 @@ Hmm...something doesn't look right - "zoom and enhance".
 
 ![Circles Zoomed In](/man/img/circles-punched-in.svg "Three circles - zoomed in")
 
-I want the area where those circles intersect to be one point - just touching, not passing eachother like they are here (albeit barely).
+I want the area where those circles intersect to be one point - just touching, not passing each other like they are here (albeit barely).
 We also need to know our "connection points" to draw the lines between the edges of the circles.
 It's time to "math this out".
 
@@ -73,7 +73,7 @@ First, let's use the symmetry of the equilateral triangle to find the pixel-perf
 
 ![Circles manually centered](/man/vid/circles-centers.svg "Manually place each circle instead of rotationally transforming")
 
-Now that we *know* where the centers of our cirlces are, we can place them manually (instead of rotating them about the center) and will do so going forward.
+Now that we *know* where the centers of our circles are, we can place them manually (instead of rotating them about the center) and will do so going forward.
 
 With that done, how did I get the coordinates for the triangle's points?
 Here is a visual of what to use to get the intersection point of the top circle and right leg of the triangle.
@@ -81,7 +81,7 @@ You'll need to know that the angles of an equilateral triangle are all 60°.
 
 ![Circles Triangle Top Point](/man/vid/triangle-top-point.svg "Daisy-chaining our way to the top")
 
-I also applied the following trigonomy functions to get the lengths of various lines (these were applied earlier to position the cirlces):
+I also applied the following trigonometric functions to get the lengths of various lines (these were applied earlier to position the circles):
 ```math
 \text{SOHCAHTOA}
 \left\lbrace\begin{split}
