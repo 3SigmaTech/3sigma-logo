@@ -67,16 +67,14 @@ I'll explain why in a bit, but let's familiarize ourselves with our new landscap
 
 ![Circles Triangle and Square](/man/img/circles-triangle-square.svg "Three circles, rotation center, triangle, and canvas bounds")
 
-Going forward, I'm going to leave the circles in place to help us remember what we're doing but keep in mind that they are not pixel-perfect...yet.
-
 First, let's use the symmetry of the equilateral triangle to find the pixel-perfect centers for the two lower circles.
 
 ![Circles manually centered](/man/vid/circles-centers.svg "Manually place each circle instead of rotationally transforming")
 
-Now that we *know* where the centers of our circles are, we can place them manually (instead of rotating them about the center) and will do so going forward.
+Now that we *know* where the centers of our circles are, we can place them manually (instead of rotating them as we have been) and will do so going forward.
 
 With that done, how did I get the coordinates for the triangle's points?
-Here is a visual of what to use to get the intersection point of the top circle and right leg of the triangle.
+Here is a visual of what to use to get the intersection point of the top circle and right leg of the triangle, and how I went from there to the top of the triange.
 You'll need to know that the angles of an equilateral triangle are all 60°.
 
 ![Circles Triangle Top Point](/man/vid/triangle-top-point.svg "Daisy-chaining our way to the top")
@@ -104,4 +102,10 @@ This allows us to define **one** path to connect the circles (instead of a line 
 Let's do it!
 
 ![Drawing Inscribing Patch](/man/vid/inscribing-path.svg "Drawing the inscribing path")
+
+# Final Product
+
+![3Sigma Logo](/src/Logo.svg "The 3Sigma Logo")
+
+![3Sigma Logo Alternate](/src/Logo-Alternate.svg "The 3Sigma Logo with alternative coloring")
 
