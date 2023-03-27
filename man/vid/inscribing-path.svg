@@ -21,7 +21,14 @@
             <feFlood
                 flood-opacity="1"
                 flood-color="#09e3e3"
-                result="glowFlood" />
+                result="glowFlood">
+                <animate
+                    attributeName="flood-opacity"
+                    values="0;0;1;1"
+                    keyTimes="0;0.7;0.7;1"
+                    dur="10s"
+                    repeatCount="indefinite" />
+            </feFlood>
             <feComposite
                 in="glowFlood"
                 in2="SourceGraphic"
