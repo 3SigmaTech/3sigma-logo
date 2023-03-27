@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<svg
+    width="560"
+    height="560"
+    viewBox="0 0 560 560"
+    id="logo-rotational-symmetry"
+    version="1.1"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:svg="http://www.w3.org/2000/svg"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:cc="http://creativecommons.org/ns#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+>
+    <defs id="defs">
+        <circle id="sigma" cx="230" cy="130" r="100" />
+        <marker id="highlight-arrowhead" markerWidth="10" markerHeight="7"
+            refX="0" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="green" />
+        </marker>
+        <marker id="meta-arrowhead" markerWidth="10" markerHeight="7"
+            refX="0" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#f00" />
+        </marker>
+        <filter x="0" y="0" width="1" height="1" id="background">
+            <feFlood flood-opacity="0.75" flood-color="white" result="bg" />
+            <feMerge>
+                <feMergeNode in="bg" />
+                <feMergeNode in="SourceGraphic" />
+            </feMerge>
+        </filter>
+    </defs>
+    <style>
+        #frame {
+        fill-opacity: 0;
+        stroke: #f00;
+        stroke-width: 3;
+        }
+        #center {
+        fill: #f00;
+        }
+        #loading {
+        fill-opacity: 0;
+        stroke: #f00;
+        stroke-width: 3px;
+        }
+
+        #sigma {
+        fill-opacity: 0;
+        stroke: #000;
+        stroke-width: 1px;
+        font-size: 300px;
+        font-family: sans-serif;
+        }
+
+        #triangle {
+        fill:none;
+        stroke:green;
+        stroke-width:1;
+        }
+
+        .sigma-center {
+        fill: #000;
+        }
+
+        .markup-line {
+        stroke: #000;
+        stroke-width: 2px;
+        }
+        .light-line {
+        stroke: #000;
+        stroke-width: 1px;
+        }
+
+        .highlight-text {
+        fill: green;
+        }
+        .highlight-dot {
+        fill: green;
+        }
+        .highlight-line {
+        stroke: green;
+        stroke-width: 2px;
+        }
+        .highlight-arrow {
+        stroke: green;
+        stroke-width: 1px;
+        marker-end: url(#highlight-arrowhead);
+        }
+
+    </style>
+    <g transform="translate(50 100)">
+        <rect id="frame" x="0" y="0" height="460" width="460" />
+        <circle id="center" cx="230" cy="245" r="5" />
+        <circle id="loading" cx="20" cy="20" r="10">
+            <animate
+                attributeName="stroke-dasharray"
+                from="1 63"
+                to="63 63"
+                dur="10s"
+                repeatCount="indefinite" />
+        </circle>
+
+        <path
+            id="triangle"
+            c="   top       right      left"
+            d="M 230 -70 L 503 403 L -43 403 Z"
+        />
+
+        <use href="#sigma" />
+        <use href="#sigma" transform="rotate(120 230 245)" />
+        <use href="#sigma" transform="rotate(240 230 245)" />
+
+        <circle class="highlight-dot" cx="230" cy="-70" r="3" />
+        <circle class="sigma-center" cx="230" cy="130" r="3" />
+        <circle class="sigma-center" cx="130" cy="303" r="3" />
+        <circle class="sigma-center" cx="330" cy="303" r="3" />
+
+        <line class="markup-line" x1="230" x2="130" y1="130" y2="303">
+            <animate
+                attributeName="x2"
+                values="230;130;130"
+                keyTimes="0;0.1;1"
+                dur="10s"
+                repeatCount="indefinite"
+            />
+            <animate
+                attributeName="y2"
+                values="130;303;303"
+                keyTimes="0;0.1;1"
+                dur="10s"
+                repeatCount="indefinite"
+            />
+        </line>
+
+        <line class="markup-line" x1="230" x2="330" y1="130" y2="303">
+            <animate
+                attributeName="x2"
+                values="230;330;330"
+                keyTimes="0;0.1;1"
+                dur="10s"
+                repeatCount="indefinite"
+            />
+            <animate
+                attributeName="y2"
+                values="130;303;303"
+                keyTimes="0;0.1;1"
+                dur="10s"
+                repeatCount="indefinite"
+            />
+        </line>
+
+        <g>
+            <animate
+                attributeName="opacity"
+                values="0;1;1"
+                keyTimes="0;0.1;1"
+                dur="10s"
+                repeatCount="indefinite"
+            />
+            <text class="markup-text" x="260" y="180">
+                100px</text>
+            <text class="markup-text" x="160" y="180">100px</text>
+        </g>
+        <g>
+            <animate
+                attributeName="opacity"
+                values="0;0;1;1"
+                keyTimes="0;0.05;0.15;1"
+                dur="10s"
+                repeatCount="indefinite"
+            />
+            <text class="markup-text" x="310" y="260">100px</text>
+            <text class="markup-text" x="110" y="260">100px</text>
+        </g>
+
+
+        <line class="markup-line" x1="130" x2="230" y1="303" y2="303">
+            <animate
+                attributeName="x2"
+                values="130;130;230;230"
+                keyTimes="0;0.1;0.2;1"
+                dur="10s"
+                repeatCount="indefinite"
+            />
+        </line>
+        <line class="markup-line" x1="330" x2="230" y1="303" y2="303">
+            <animate
+                attributeName="x2"
+                values="330;330;230;230"
+                keyTimes="0;0.1;0.2;1"
+                dur="10s"
+                repeatCount="indefinite"
+            />
+        </line>
+        <g>
+            <animate
+                attributeName="opacity"
+                values="0;0;1;1"
+                keyTimes="0;0.1;0.2;1"
+                dur="10s"
+                repeatCount="indefinite"
+            />
+            <text class="highlight-text" x="140" y="300">
+                60°</text>
+            <text class="highlight-text" x="300" y="300">60°</text>
+            <text class="markup-text" x="160" y="320">100px</text>
+            <text class="markup-text" x="260" y="320">100px</text>
+        </g>
+
+        <line class="highlight-line" x1="230" x2="230" y1="130" y2="303">
+            <animate
+                attributeName="y2"
+                values="130;130;303;303"
+                keyTimes="0;0.2;0.3;1"
+                dur="10s"
+                repeatCount="indefinite"
+            />
+        </line>
+
+        <g>
+            <animate
+                attributeName="opacity"
+                values="0;0;1;1"
+                keyTimes="0;0.3;0.4;1"
+                dur="10s"
+                repeatCount="indefinite"
+            />
+            <text class="highlight-text" x="160" y="90">100·tan(60°) = 173.2</text>
+            <line class="highlight-arrow" x1="180" y1="90" x2="220" y2="170" />
+        </g>
+
+        <g>
+            <animate
+                attributeName="opacity"
+                values="0;0;1;1"
+                keyTimes="0;0.4;0.5;1"
+                dur="10s"
+                repeatCount="indefinite"
+            />
+            <text class="highlight-text" x="60" y="320">(130, 303.2)</text>
+            <text class="highlight-text" x="310" y="320">(330, 303.2)</text>
+        </g>
+    </g>
+</svg>
