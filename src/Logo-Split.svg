@@ -18,26 +18,22 @@
         <filter id="glow">
             <feFlood
                 flood-opacity="1"
-                flood-color="#007171"
-                result="flood"
-                id="glowFlood" />
+                flood-color="#047171"
+                result="glowFlood" />
             <feComposite
-                in="flood"
+                in="glowFlood"
                 in2="SourceGraphic"
                 operator="in"
-                result="glowConstrained"
-                id="glowComposite" />
+                result="glowConstrained" />
             <feGaussianBlur
                 in="glowConstrained"
                 stdDeviation="10"
-                result="blur"
-                id="glowBlur" />
+                result="glowBlur" />
             <feComposite
                 in="SourceGraphic"
-                in2="offset"
+                in2="glowBlur"
                 operator="over"
-                result="glowApplied"
-                id="glowApplication" />
+                result="glowApplied" />
         </filter>
     </defs>
     <style>
