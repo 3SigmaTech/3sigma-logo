@@ -81,7 +81,8 @@ You'll need to know that the angles of an equilateral triangle are all 60°.
 
 ![Circles Triangle Top Point](/man/vid/triangle-top-point.svg "Daisy-chaining our way to the top")
 
-I also applied the following trigonomy functions to get the lengths of various lines (these were applied earlier to position the cirlces): $$
+I also applied the following trigonomy functions to get the lengths of various lines (these were applied earlier to position the cirlces):
+```math
 \text{SOHCAHTOA}
 \left\lbrace\begin{split}
     \sin(\theta) & = \frac{\text{Opposite}}{\text{Hypotenuse}}\\
@@ -89,7 +90,8 @@ I also applied the following trigonomy functions to get the lengths of various l
     \cos(\theta) & = \frac{\text{Adjacent}}{\text{Hypotenuse}}\\
     \\
     \tan(\theta) & = \frac{\text{Opposite}}{\text{Adjacent}}\\
-\end{split}\right. $$
+\end{split}\right.
+```
 
 This shows the intersection point is $r·\sin(30°)$ above the center-point of the top circle, where $r$ is the radius of the circle. (Note: I arbitrarily used $r=100$ when defining my logo for simpler math).
 
