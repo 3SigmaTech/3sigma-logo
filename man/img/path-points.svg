@@ -26,6 +26,10 @@
         </filter>
     </defs>
     <style>
+        #container {
+        fill-opacity: 0.5;
+        fill: #fff;
+        }
         #frame {
         fill-opacity: 0;
         stroke: #f00;
@@ -84,6 +88,7 @@
         }
 
     </style>
+    <rect id="container" x="0" y="0" height="560" width="560" />
     <g transform="translate(50 100)">
         <rect id="frame" x="0" y="0" height="460" width="460" />
         <circle id="center" cx="230" cy="245" r="5" />

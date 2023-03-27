@@ -50,6 +50,10 @@
         </filter>
     </defs>
     <style>
+        #container {
+        fill-opacity: 0.5;
+        fill: #fff;
+        }
         #frame {
         fill-opacity: 0;
         stroke: #f00;
@@ -112,6 +116,7 @@
         stroke-width: 5;
         }
     </style>
+    <rect id="container" x="0" y="0" height="560" width="560" />
     <g transform="translate(50 100)">
         <rect id="frame" x="0" y="0" height="460" width="460" />
         <circle id="loading" cx="20" cy="20" r="10">
@@ -182,7 +187,8 @@
                 keyTimes="0;0;0.1;0.2;1"
                 dur="10s"
                 repeatCount="indefinite"
-            /> Arc</text>
+            />
+            Arc</text>
         <text class="markup-text" x="330" y="180">
             <animate
                 attributeName="opacity"
