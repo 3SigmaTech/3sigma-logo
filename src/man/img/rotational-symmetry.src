@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<svg
+    width="460"
+    height="460"
+    viewBox="0 0 460 460"
+    version="1.1"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:svg="http://www.w3.org/2000/svg">
+    <defs id="3sigma-logo-man-defs"></defs>
+    <style id="3sigma-logo-man-style"></style>
+    <rect id="frame" class="meta" x="0" y="0" height="460" width="460" />
+    <circle id="center" class="meta" cx="230" cy="230" r="5" />
+
+    <use href="#sigma-orig" />
+    <use href="#sigma-orig" transform="rotate(120 230 230)" />
+    <use href="#sigma-orig" transform="rotate(240 230 230)" />
+</svg>

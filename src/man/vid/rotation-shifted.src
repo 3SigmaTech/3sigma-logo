@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<svg
+    width="460"
+    height="460"
+    viewBox="0 0 460 460"
+    version="1.1"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:svg="http://www.w3.org/2000/svg">
+    <defs id="3sigma-logo-man-defs"></defs>
+    <style id="3sigma-logo-man-style"></style>
+    <rect id="frame" class="meta" x="0" y="0" height="460" width="460" />
+    <circle id="center" class="meta" cx="230" cy="230" r="5" />
+    <use href="#loading">
+        <style>.loading {animation-duration: 6s;}</style>
+    </use>
+
+    <use href="#sigma" />
+    <use href="#sigma" transform="rotate(120 230 245)">
+        <animateTransform
+            attributeName="transform"
+            type="rotate"
+            values="120 230 230;120 230 245;120 230 245"
+            keyTimes="0;0.5;1"
+            dur="6s"
+            repeatCount="indefinite" />
+    </use>
+    <use href="#sigma" transform="rotate(240 230 245)">
+        <animateTransform
+            attributeName="transform"
+            type="rotate"
+            values="240 230 230;240 230 245;240 230 245"
+            keyTimes="0;0.5;1"
+            dur="6s"
+            repeatCount="indefinite" />
+    </use>
+
+    <circle class="markup" cx="230" cy="230" r="3">
+        <animate
+            attributeName="cy"
+            values="230;245;245"
+            keyTimes="0;0.5;1"
+            dur="6s"
+            repeatCount="indefinite" />
+    </circle>
+        
+</svg>

@@ -1,0 +1,110 @@
+#container {
+    fill-opacity: 0;
+}
+
+#frame {
+    fill-opacity: 0;
+    stroke-width: 3;
+}
+
+.loading {
+    fill-opacity: 0;
+    stroke-width: 3px;
+    animation-name: progressIndicator;
+    animation-iteration-count: infinite;
+}
+
+@keyframes progressIndicator {
+    0% {
+        stroke-dasharray: 1 63;
+    }
+
+    100% {
+        stroke-dasharray: 63 63;
+    }
+}
+
+.sigma {
+    fill-opacity: 0;
+    font-size: 300px;
+    font-family: sans-serif;
+}
+
+text.sigma {
+    fill-opacity: 1;
+}
+
+#triangle {
+    fill: none;
+    stroke-width: 1;
+}
+
+line.markup,
+line.highlight,
+line.meta {
+    stroke-width: 2px;
+}
+
+text,
+circle {
+
+    &.markup,
+    &.highlight,
+    &.meta {
+        stroke-width: 0;
+    }
+}
+
+line.light,
+line.arrow {
+    stroke-width: 1px;
+}
+
+.meta {
+    fill: red;
+    stroke: red;
+
+    &.arrow {
+        marker-end: url(#meta-arrowhead);
+    }
+}
+
+#inscribing-path {
+    fill-opacity: 0;
+    stroke-width: 5;
+}
+
+.highlight {
+    fill: green;
+    stroke: green;
+
+    &.arrow {
+        marker-end: url(#highlight-arrowhead);
+    }
+
+    @media (prefers-color-scheme: dark) {
+        fill: lightgreen;
+        stroke: lightgreen;
+    }
+}
+
+.markup,
+.sigma {
+    fill: black;
+    stroke: black;
+
+    &.arrow {
+        marker-end: url(#markup-arrowhead);
+    }
+
+    @media (prefers-color-scheme: dark) {
+        fill: white;
+        stroke: white;
+    }
+}
+
+#background>feFlood {
+    @media (prefers-color-scheme: dark) {
+        flood-color: black;
+    }
+}
