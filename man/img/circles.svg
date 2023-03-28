@@ -12,11 +12,11 @@
     xmlns:cc="http://creativecommons.org/ns#"
     xmlns:dc="http://purl.org/dc/elements/1.1/">
     <defs id="defs">
-        <circle id="sigma" cx="230" cy="115" r="100"/>
+        <circle id="sigma" cx="230" cy="115" r="100" />
     </defs>
     <style>
         #frame {
-        fill-opacity: 0.5;
+        fill-opacity: 0;
         fill: #fff;
         stroke: #f00;
         stroke-width: 3;
@@ -31,6 +31,11 @@
         stroke-width: 1px;
         font-size: 300px;
         font-family: sans-serif;
+        }
+
+        @media (prefers-color-scheme: dark) {
+        #sigma { stroke: white; }
+        #triangle { stroke: lightgreen; }
         }
 </style>
     <rect id="frame" x="0" y="0" height="460" width="460" />

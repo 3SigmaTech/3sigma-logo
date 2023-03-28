@@ -16,7 +16,7 @@
     </defs>
     <style>
         #frame {
-        fill-opacity: 0.5;
+        fill-opacity: 0;
         fill: #fff;
         stroke: #f00;
         stroke-width: 3;
@@ -61,6 +61,22 @@
         stroke-width: 2px;
         }
 
+        @media (prefers-color-scheme: dark) {
+        #sigma { stroke: white; }
+        .sigma { stroke: white; }
+        #triangle { stroke: lightgreen; }
+        .sigma-center { fill: white; }
+        .markup-line { stroke: white; }
+        .markup-text { stroke: white; fill: white; }
+        .light-line { stroke: white; }
+
+
+        .highlight-dot { fill: lightgreen; }
+        .highlight-line { stroke: lightgreen; }
+        .highlight-text { fill: lightgreen; }
+        .highlight-arrow { stroke: lightgreen; }
+        #highlight-arrowhead polygon { fill: lightgreen; }
+        }
     </style>
     <rect id="frame" x="0" y="0" height="460" width="460" />
     <circle id="center" cx="230" cy="230" r="5" />
@@ -94,22 +110,23 @@
         <circle class="sigma-center" cx="030" cy="303" r="3" />
 
         <line class="markup-line" x1="230" x2="230" y1="030" y2="130" />
-        <text x="235" y="80">100px</text>
+        <text class="markup-text" x="235" y="80">100px</text>
 
         <line class="markup-line" x1="230" x2="230" y1="130" y2="230" />
-        <text x="235" y="180">100px</text>
+        <text class="markup-text" x="235" y="180">100px</text>
 
         <line class="markup-line" x1="230" x2="130" y1="303" y2="303" />
-        <text x="170" y="320">100px</text>
+        <text class="markup-text" x="170" y="320">100px</text>
 
         <line class="markup-line" x1="130" x2="230" y1="303" y2="303" />
-        <text x="170" y="320">100px</text>
+        <text class="markup-text" x="170" y="320">100px</text>
 
         <line class="markup-line" x1="30" x2="130" y1="303" y2="303" />
-        <text x="70" y="320">100px</text>
+        <text class="markup-text" x="70" y="320">100px</text>
 
         <line class="highlight-line" x1="0" x2="30" y1="303" y2="303" />
-        <text class="highlight-text" x="2" y="320">30px</text>
+        <text class="highlight-text" x="2" y="320">
+            30px</text>
     </g>
 
 

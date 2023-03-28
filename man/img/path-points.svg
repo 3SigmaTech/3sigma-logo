@@ -27,7 +27,7 @@
     </defs>
     <style>
         #container {
-        fill-opacity: 0.5;
+        fill-opacity: 0;
         fill: #fff;
         }
         #frame {
@@ -87,6 +87,22 @@
         marker-end: url(#highlight-arrowhead);
         }
 
+        @media (prefers-color-scheme: dark) {
+        #sigma { stroke: white; }
+        .sigma { stroke: white; }
+        #triangle { stroke: lightgreen; }
+        .sigma-center { fill: white; }
+        .markup-line { stroke: white; }
+        .markup-text { stroke: white; fill: white; }
+        .light-line { stroke: white; }
+
+
+        .highlight-dot { fill: lightgreen; }
+        .highlight-line { stroke: lightgreen; }
+        .highlight-text { fill: lightgreen; }
+        .highlight-arrow { stroke: lightgreen; }
+        #highlight-arrowhead polygon { fill: lightgreen; }
+        }
     </style>
     <rect id="container" x="0" y="0" height="560" width="560" />
     <g transform="translate(50 100)">
@@ -103,12 +119,12 @@
         <circle class="sigma" r="100" cx="330" cy="303" />
         <circle class="sigma" r="100" cx="130" cy="303" />
 
-        <circle class="highlight-dot" cx="143.4" cy="80" r="3" />
-        <circle class="highlight-dot" cx="316.6" cy="80" r="3" />
-        <circle class="highlight-dot" cx="416.6" cy="253" r="3" />
-        <circle class="highlight-dot" cx="330" cy="403" r="3" />
-        <circle class="highlight-dot" cx="130" cy="403" r="3" />
-        <circle class="highlight-dot" cx="43.4" cy="253" r="3" />
+        <circle class="highlight-dot" cx="143.4" cy="80" r="5" />
+        <circle class="highlight-dot" cx="316.6" cy="80" r="5" />
+        <circle class="highlight-dot" cx="416.6" cy="253" r="5" />
+        <circle class="highlight-dot" cx="330" cy="403" r="5" />
+        <circle class="highlight-dot" cx="130" cy="403" r="5" />
+        <circle class="highlight-dot" cx="43.4" cy="253" r="5" />
 
     </g>
 </svg>

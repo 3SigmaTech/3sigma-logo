@@ -32,7 +32,7 @@
     </defs>
     <style>
         #container {
-        fill-opacity: 0.5;
+        fill-opacity: 0;
         fill: #fff;
         }
         #frame {
@@ -92,6 +92,22 @@
         marker-end: url(#highlight-arrowhead);
         }
 
+
+        @media (prefers-color-scheme: dark) {
+        #sigma { stroke: white; }
+        #triangle { stroke: lightgreen; }
+        .sigma-center { fill: white; }
+        .markup-line { stroke: white; }
+        .markup-text { stroke: white; fill: white; }
+        .light-line { stroke: white; }
+
+
+        .highlight-dot { fill: lightgreen; }
+        .highlight-line { stroke: lightgreen; }
+        .highlight-text { fill: lightgreen; }
+        .highlight-arrow { stroke: lightgreen; }
+        #highlight-arrowhead polygon { fill: lightgreen; }
+        }
     </style>
     <rect id="container" x="0" y="0" height="560" width="560" />
     <g transform="translate(50 100)">
