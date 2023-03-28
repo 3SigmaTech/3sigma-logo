@@ -76,7 +76,7 @@
           stroke-width: 3;
         }
         
-        .loading {
+        #loading {
           fill-opacity: 0;
           stroke-width: 3px;
           animation-name: progressIndicator;
