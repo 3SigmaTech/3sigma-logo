@@ -105,7 +105,7 @@ Let's do it!
 
 # Final Product
 
-![3Sigma Logo](/src/Logo.svg "The 3Sigma Logo")
+![3Sigma Logo](/dist/Logo.svg "The 3Sigma Logo")
 
-![3Sigma Logo Alternate](/src/Logo-Alternate.svg "The 3Sigma Logo with alternative coloring")
+![3Sigma Logo Alternate](/dist/Logo-Alternate.svg "The 3Sigma Logo with alternative coloring")
 
