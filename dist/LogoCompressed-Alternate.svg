@@ -1,41 +1,110 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 
 <svg
-    xmlns:dc="http://purl.org/dc/elements/1.1/"
-    xmlns:cc="http://creativecommons.org/ns#"
-    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-    xmlns:svg="http://www.w3.org/2000/svg"
+    width="270"
+    height="30"
+    viewBox="0 0 270 30"
+    version="1.1"
     xmlns="http://www.w3.org/2000/svg"
-    width="145"
-    height="50"
-    viewBox="0 0 145 50"
-    id="svg2"
-    version="1.1">
-    <defs id="defs" />
-    <image x="-1" y="0" width="55" href="Logo-NoGlow-Alternate.svg" />
+    xmlns:svg="http://www.w3.org/2000/svg"
+>
 
-    <text
-        style="fill:#09e3e3;font-size:20px;font-family:'Capella';"
-        x="62"
-        y="12"
-        id="name"
-        transform="scale(0.663 1)"
-    >3</text>
+    <defs id="3sigma-logo-defs">
+    
+        <rect id="frame-TEMP" fill="orange" x="0" y="0" width="100%" height="100%" />
+    
+        <filter id="glow">
+            <feFlood
+                result="glowFlood" />
+            <feComposite
+                in="glowFlood"
+                in2="SourceGraphic"
+                operator="in"
+                result="glowConstrained" />
+            <feGaussianBlur
+                in="glowConstrained"
+                stdDeviation="10"
+                result="glowBlur" />
+            <feComposite
+                in="SourceGraphic"
+                in2="glowBlur"
+                operator="over"
+                result="glowApplied" />
+        </filter>
+    
+        <g id="three-sigma-logo" style="filter:url(#glow)">
+            <circle r="100" cx="230" cy="130" />
+            <circle r="100" cx="330" cy="303" />
+            <circle r="100" cx="130" cy="303" />
+            <path
+                d="M 143.4 80 A 100 100 0 0 1 316.6 80 L 416.6 253 A 100 100 0 0 1 330 403 L 130 403 A 100 100 0 0 1 43.4 253 L 143.4 80" />
+        </g>
+    
+        <text id="three-sigma-name" class="normal">
+            3Sigma Technologies
+        </text>
+    
+        <text id="three-sigma">
+            3Sigma
+        </text>
+    
+        <text id="technologies">
+            Technologies
+        </text>
+    </defs>
+    <style id="3sigma-logo-style">
+        :root {
+          --primary-color: red;
+          --secondary-color: red;
+          --glow-opacity: 0;
+          --font-normal: 'Capella';
+          --font-expanded: 'Capella Expanded';
+          --font-compressed: 'Capella Extra-condensed';
+        }
+        
+        #glow > feFlood {
+          flood-color: var(--secondary-color);
+          flood-opacity: var(--glow-opacity);
+        }
+        
+        #three-sigma-logo > circle, #three-sigma-logo > path {
+          fill-opacity: 0;
+          stroke: var(--primary-color);
+          stroke-width: 30;
+          stroke-opacity: 1;
+        }
+        
+        #three-sigma, #technologies, #three-sigma-name {
+          fill: var(--primary-color);
+          font-size: 42px;
+          font-family: var(--font-normal);
+        }
+        
+        .normal {
+          font-family: var(--font-normal);
+        }
+        
+        .expanded {
+          font-family: var(--font-expanded);
+        }
+        
+        .compressed {
+          font-family: var(--font-compressed);
+        }
+        
+    </style>
 
+    <style>
+        :root {
+        --primary-color: #09e3e3;
+        --secondary-color: #000000;
+        --glow-opacity: 0;
+        }
+        #three-sigma {
+        font-size: 30px;
+        }
+    </style>
 
-    <text
-        style="fill:#09e3e3;font-size:27px;font-family:'Capella';"
-        x="114"
-        y="21.3"
-        id="name"
-        transform="scale(0.5 1.35)"
-    >Sigma</text>
-
-    <text
-        style="fill:#09e3e3;font-size:27px;font-family:'Capella';"
-        x="72"
-        y="37"
-        id="name"
-        transform="scale(0.74 1.35)"
-    >Tech</text>
+    <use href="#three-sigma-logo" x="83" y="0" transform="scale(0.06 0.06)" />
+    <use href="#three-sigma" x="33" y="23" />
 </svg>

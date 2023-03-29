@@ -1,0 +1,41 @@
+
+:root {
+    --primary-color: red;
+    --secondary-color: red;
+    --glow-opacity: 0;
+    --font-normal: 'Capella';
+    --font-expanded: 'Capella Expanded';
+    --font-compressed: 'Capella Extra-condensed';
+}
+
+#glow > feFlood {
+    flood-color: var(--secondary-color);
+    flood-opacity: var(--glow-opacity);
+}
+
+#three-sigma-logo {
+    & > circle, & > path {
+        fill-opacity: 0;
+        stroke: var(--primary-color);
+        stroke-width: 30;
+        stroke-opacity: 1;
+    }
+}
+
+#three-sigma, #technologies, #three-sigma-name {
+    fill: var(--primary-color);
+    font-size: 42px;
+    font-family: var(--font-normal);
+}
+
+.normal {
+    font-family: var(--font-normal);
+}
+
+.expanded {
+    font-family: var(--font-expanded);
+}
+
+.compressed {
+    font-family: var(--font-compressed);
+}

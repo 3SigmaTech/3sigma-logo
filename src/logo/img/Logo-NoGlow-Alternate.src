@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<svg
+    width="460"
+    height="460"
+    viewBox="0 0 460 460"
+    version="1.1"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:svg="http://www.w3.org/2000/svg"
+>
+
+    <defs id="3sigma-logo-defs" />
+    <style id="3sigma-logo-style"></style>
+
+    <style>
+        :root {
+        --primary-color: #09e3e3;
+        --secondary-color: #000000;
+        --glow-opacity: 0;
+        }
+    </style>
+
+    <use href="#three-sigma-logo" />
+
+</svg>

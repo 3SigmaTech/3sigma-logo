@@ -4,21 +4,17 @@
     width="460"
     height="460"
     viewBox="0 0 460 460"
-    id="three-sigma-logo"
     version="1.1"
     xmlns="http://www.w3.org/2000/svg"
     xmlns:svg="http://www.w3.org/2000/svg"
-    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-    xmlns:cc="http://creativecommons.org/ns#"
-    xmlns:dc="http://purl.org/dc/elements/1.1/">
-    <defs id="defs">
-        <linearGradient id="3sigma-maincolor">
-            <stop stop-color="#000000" />
-        </linearGradient>
+>
+    
+    <defs id="3sigma-logo-defs">
+    
+        <rect id="frame-TEMP" fill="orange" x="0" y="0" width="100%" height="100%" />
+    
         <filter id="glow">
             <feFlood
-                flood-opacity="1"
-                flood-color="#09e3e3"
                 result="glowFlood" />
             <feComposite
                 in="glowFlood"
@@ -35,26 +31,77 @@
                 operator="over"
                 result="glowApplied" />
         </filter>
+    
+        <g id="three-sigma-logo" style="filter:url(#glow)">
+            <circle r="100" cx="230" cy="130" />
+            <circle r="100" cx="330" cy="303" />
+            <circle r="100" cx="130" cy="303" />
+            <path
+                d="M 143.4 80 A 100 100 0 0 1 316.6 80 L 416.6 253 A 100 100 0 0 1 330 403 L 130 403 A 100 100 0 0 1 43.4 253 L 143.4 80" />
+        </g>
+    
+        <text id="three-sigma-name" class="normal">
+            3Sigma Technologies
+        </text>
+    
+        <text id="three-sigma">
+            3Sigma
+        </text>
+    
+        <text id="technologies">
+            Technologies
+        </text>
     </defs>
-    <style>
-        #three-sigma-logo-elements circle {
-        fill-opacity:0;
-        stroke:url(#3sigma-maincolor);
-        stroke-width:30;
-        stroke-opacity:1;
+    <style id="3sigma-logo-style">
+        :root {
+          --primary-color: red;
+          --secondary-color: red;
+          --glow-opacity: 0;
+          --font-normal: 'Capella';
+          --font-expanded: 'Capella Expanded';
+          --font-compressed: 'Capella Extra-condensed';
         }
-        #three-sigma-logo-elements path {
-        fill-opacity:0;
-        stroke:url(#3sigma-maincolor);
-        stroke-width:30;
+        
+        #glow > feFlood {
+          flood-color: var(--secondary-color);
+          flood-opacity: var(--glow-opacity);
+        }
+        
+        #three-sigma-logo > circle, #three-sigma-logo > path {
+          fill-opacity: 0;
+          stroke: var(--primary-color);
+          stroke-width: 30;
+          stroke-opacity: 1;
+        }
+        
+        #three-sigma, #technologies, #three-sigma-name {
+          fill: var(--primary-color);
+          font-size: 42px;
+          font-family: var(--font-normal);
+        }
+        
+        .normal {
+          font-family: var(--font-normal);
+        }
+        
+        .expanded {
+          font-family: var(--font-expanded);
+        }
+        
+        .compressed {
+          font-family: var(--font-compressed);
+        }
+        
+    </style>
+    
+    <style>
+        :root {
+            --primary-color: #000000;
+            --secondary-color: #09e3e3;
+            --glow-opacity: 1;
         }
     </style>
-    <g id="three-sigma-logo-elements" style="filter:url(#glow)">
-        <circle r="100" cx="230" cy="130" />
-        <circle r="100" cx="330" cy="303" />
-        <circle r="100" cx="130" cy="303" />
-        <path
-            d="M 143.4 80 A 100 100 0 0 1 316.6 80 L 416.6 253 A 100 100 0 0 1 330 403 L 130 403 A 100 100 0 0 1 43.4 253 L 143.4 80" />
-    </g>
+
+    <use href="#three-sigma-logo" />
     
 </svg>

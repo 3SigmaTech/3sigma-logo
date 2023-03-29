@@ -16,6 +16,16 @@ const BUILD_TREE = {
         find: '<defs id="3sigma-logo-man-defs"></defs>',
         replace: '$x',
     },
+    logoStyles: {
+        content: './src/logo/styles.scss',
+        find: '<style id="3sigma-logo-style"></style>',
+        replace: '<style id="3sigma-logo-style">$x</style>',
+    },
+    logoDefs: {
+        content: './src/logo/defs.xml',
+        find: '<defs id="3sigma-logo-defs" />',
+        replace: '$x',
+    },
     src: './src/**/*.src',
     dest: function (srcflnm) {
         if (srcflnm[0] != '.') {
@@ -25,7 +35,9 @@ const BUILD_TREE = {
                 srcflnm = './' + srcflnm;
             }
         }
-        return srcflnm.replace(/\/?src\//g, "/").replace(/\.src/g, ".svg");
+        srcflnm = srcflnm.replace(/\/?src\/logo\/img\//g, "/dist/").replace(/\.src/g, ".svg");
+        srcflnm = srcflnm.replace(/\/?src\//g, "/").replace(/\.src/g, ".svg");
+        return srcflnm;
     }
 };
 
@@ -35,6 +47,8 @@ const BUILD_TREE = {
             let src = fs.readFileSync(flnm, 'utf8');
             src = replaceStyle(src, BUILD_TREE.manStyles);
             src = replaceDefs(src, BUILD_TREE.manDefs);
+            src = replaceStyle(src, BUILD_TREE.logoStyles);
+            src = replaceDefs(src, BUILD_TREE.logoDefs);
 
             fs.writeFile(BUILD_TREE.dest(flnm), src, 'utf8', function (err) {
                 if (err) return console.log(err);
